@@ -1,4 +1,4 @@
-if(sprite_index == Player_R) {
+if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Player_R) {
 	sprite_index = PlayerAttack_R;
 } else {
 	sprite_index = PlayerAttack_L;

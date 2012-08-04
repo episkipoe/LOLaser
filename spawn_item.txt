@@ -1,0 +1,10 @@
+x = irandom(room_width);
+y = irandom_range(global.min_y, global.max_y); 
+
+itm = random(60);
+
+if(itm > 40) {
+	instance_create(x, y, NyanCatenator);
+} else {
+
+}

@@ -4,15 +4,20 @@ if(!irandom(1)) {
 	x = room_width-10;
 }
 
-y = room_height-random(200);
+y = irandom_range(global.min_y, global.max_y); 
 
 
-if(global.level <= 3) {
+if(global.level < 2) {
 	if(!irandom(2)) {  //one in three chance 
-		instance_create(x, y, Camel);  //slower, but more powerful
+		instance_create(x, y, Camel);  //slower, but more powerful?
 	} else {
 		instance_create(x, y, Lion);
 	}
 } else {
+	if(!irandom(2)) {
+		instance_create(x, y, Bear);  //slower, but more powerful?
+	} else {
+		instance_create(x, y, Lion);
+	}
 	instance_create(x, y, Enemy);
 }

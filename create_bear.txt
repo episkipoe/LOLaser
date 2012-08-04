@@ -1,0 +1,5 @@
+left_sprite=Bear_L;
+right_sprite=Bear_R;
+points=2;
+health=2;
+move_speed=3;
