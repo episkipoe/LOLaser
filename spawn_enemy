@@ -1,0 +1,8 @@
+if(!random(10)) {
+	x = 0;
+} else if(!random(10)) {
+	x = room_width;
+}
+y = random(0+random(200));
+instance_create(x, y, Enemy);
+
