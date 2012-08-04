@@ -1,5 +1,5 @@
 event_inherited();
-left_sprite=Nyan_L;
+left_sprite= sprite_index = Nyan_L;
 right_sprite=Nyan_R;
 points=2;
 hit_points=2;

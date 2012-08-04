@@ -1,5 +1,5 @@
 event_inherited();
-left_sprite=Camel_L;
+left_sprite = sprite_index = Camel_L;
 right_sprite=Camel_R;
 points=1;
 hit_points=5;

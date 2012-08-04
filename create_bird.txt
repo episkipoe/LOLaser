@@ -1,5 +1,5 @@
 event_inherited();
-left_sprite=Bird_R;
+left_sprite= sprite_index =Bird_R;
 right_sprite=Bird_R;
 points=100;
 hit_points=4000;
