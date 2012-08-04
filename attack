@@ -1,9 +1,5 @@
-player=argument0;
-global.player_x=player.x;
-global.player_y=player.y;
-
 global.attack_distance=30;
 with Enemy {
-	dx = point_distance(global.player_x, global.player_y, x, y);
+	dx = point_distance(other.x, other.y, x, y);
 	if(dx < global.attack_distance) instance_destroy();
 }
