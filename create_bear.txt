@@ -1,3 +1,4 @@
+event_inherited();
 left_sprite=Bear_L;
 right_sprite=Bear_R;
 points=2;

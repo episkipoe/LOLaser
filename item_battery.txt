@@ -1,0 +1,4 @@
+global.battery += 20;
+if(global.battery > global.maxbattery) {
+	global.battery = global.maxbattery
+}
