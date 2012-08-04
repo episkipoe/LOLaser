@@ -1,5 +1,5 @@
 sound_play(Nyan);
 with Lion {
-	left_sprite=Nyan_s;
-	right_sprite=Nyan_s;
+	left_sprite=Nyan_L;
+	right_sprite=Nyan_R;
 }
