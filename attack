@@ -1,18 +1,18 @@
 if(sprite_index == Player_R) {
 	sprite_index = PlayerAttack_R;
+	attack_cx = (x + sprite_width + global.attack_distance) / 2;
 } else {
 	sprite_index = PlayerAttack_L;
+	attack_cx = (x + sprite_width - global.attack_distance) / 2;
 }
-
+attack_cy = (y + sprite_height) / 2;
 with Enemy {
-	other_cy = (other.y + other.sprite_height) / 2;
+	
 	cy = (y + sprite_height);
 	dx = point_distance(
-		(other.x + other.sprite_width) / 2, 
-		other_cy,
-		(x + sprite_width) / 2,
-		cy);
-	if(dx < global.attack_distance && abs(cy - other_cy) < global.attack_maxYdiff ) {
+		attack_cx, attack_cy,
+		(x + sprite_width) / 2, cy);
+	if(dx < global.attack_distance && abs(cy - attack_cy) < global.attack_maxYdiff ) {
 		execute_file("destroy_enemy");
 	}
 }
