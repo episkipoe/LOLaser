@@ -3,5 +3,5 @@ sprite_index = Camel_L;
 left_sprite = Camel_L;
 right_sprite=Camel_R;
 points=1;
-hit_points=10;
+hit_points=5;
 move_speed=1;
