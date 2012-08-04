@@ -1,8 +1,9 @@
-if(!random(10)) {
+if(!irandom(1)) {
 	x = 0;
-} else if(!random(10)) {
-	x = room_width;
+} else {
+	x = room_width-10;
 }
-y = random(0+random(200));
+
+y = room_height-random(200);
 instance_create(x, y, Enemy);
 
