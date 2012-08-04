@@ -4,25 +4,31 @@ if (attack_cooldown > 0)
 }
 buffer = 3;
 
-if (Player.y - self.y > buffer)
+cy = y + sprite_height / 2;
+player_cy = Player.y + Player.sprite_height / 2;
+
+if (player_cy - cy > buffer)
 {
     self.y = min(global.max_y, self.y + move_speed);
     exit;
 }
 
-if (Player.y - self.y < -buffer)
+if (player_cy - cy < -buffer)
 {
     self.y = max(global.min_y, self.y - move_speed);
     exit;
 }
 
-if (Player.x - self.x > buffer)
+cx = x + sprite_width / 2;
+player_cx = Player.x + Player.sprite_width / 2;
+
+if (player_cx - cx > buffer)
 {
     self.x = min(global.max_x, self.x + move_speed);
     exit;
 }
 
-if (Player.x - self.x < -buffer)
+if (player_cx - cx < -buffer)
 {
     self.x = max(global.min_x, self.x - move_speed);
     exit;
