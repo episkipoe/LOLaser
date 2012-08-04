@@ -1,0 +1,4 @@
+// Don't care if sound is playing in this case
+//if (!sound_isplaying(Laser1) && !sound_isplaying(Laser2) && !sound_isplaying(Laser3)) {
+	sound_play(choose(Laser1, Laser2, Laser3));
+//}

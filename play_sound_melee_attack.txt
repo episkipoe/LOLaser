@@ -1,0 +1,4 @@
+// Don't care if sound is playing in this case
+//if (!sound_isplaying(Attack1) && !sound_isplaying(Attack2) && !sound_isplaying(Attack3) && !sound_isplaying(Attack4)) {
+	sound_play(choose(Attack1, Attack2, Attack3, Attack4));
+//}

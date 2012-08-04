@@ -1,0 +1,3 @@
+if (!sound_isplaying(Bear1) && !sound_isplaying(Bear2) && !sound_isplaying(Bear3)) {
+	sound_play(choose(Bear1, Bear2, Bear3));
+}
