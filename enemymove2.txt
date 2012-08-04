@@ -1,5 +1,4 @@
 buffer = 3;
-move_speed = 3;
 dx = Player.x - self.x;
 dy = Player.y - self.y;
 
@@ -21,12 +20,14 @@ if (abs(dy) > abs(dx))
 	if (dx > buffer)
 	{
 		self.x = min(global.max_x, self.x + move_speed);
+		sprite_index = right_sprite;
 		exit;
 	}
 
 	if (dx < -buffer)
 	{
 		self.x = max(global.min_x, self.x - move_speed);
+		sprite_index = left_sprite;
 		exit;
 	}
 }

@@ -1,5 +1,4 @@
 buffer = 3;
-move_speed = 3;
 
 if (Player.y - self.y > buffer)
 {

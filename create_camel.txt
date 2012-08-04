@@ -1,0 +1,4 @@
+left_sprite=Camel_L;
+right_sprite=Camel_R;
+points=1;
+move_speed=1;

@@ -1,9 +1,11 @@
-global.health=100;
-global.maxhealth=100;
-global.score=0;
-global.num_kills=0;
+global.health    = 100;
+global.maxhealth = 100;
+global.score     = 0;
+global.num_kills = 0;
+global.level     = 1
+global.kills_to_next_level = 10;
 
 global.min_x = 0;
-global.max_x = 800;
-global.max_y = 600;
+global.max_x = 1600;
+global.max_y = 900;
 global.min_y = 300;

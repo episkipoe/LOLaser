@@ -5,5 +5,14 @@ if(!irandom(1)) {
 }
 
 y = room_height-random(200);
-instance_create(x, y, Enemy);
 
+
+if(global.level <= 3) {
+	if(!irandom(2)) {  //one in three chance 
+		instance_create(x, y, Camel);  //slower, but more powerful
+	} else {
+		instance_create(x, y, Lion);
+	}
+} else {
+	instance_create(x, y, Enemy);
+}

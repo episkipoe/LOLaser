@@ -1,3 +1,8 @@
 instance_destroy();
 global.num_kills += 1;
-global.score += 1;
+global.score += points;
+global.kills_to_next_level -= 1;
+if(global.kills_to_next_level == 0) {
+	execute_file("next_level.txt");
+}
+

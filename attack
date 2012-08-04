@@ -1,3 +1,9 @@
+if(sprite_index == Player_R) {
+	sprite_index = PlayerAttack_R;
+} else {
+	sprite_index = PlayerAttack_L;
+}
+
 global.attack_distance=60;
 with Enemy {
 	dx = point_distance(other.x, other.y, x, y);
