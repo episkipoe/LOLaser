@@ -1,11 +1,13 @@
 if(global.battery <= 0) { exit }
 global.battery -= 5;
 
+laser_width = sprite_get_width(Laser_s);
+
 if(sprite_index == Player_R) {
     start_x = x + sprite_width + 2;
     dest_x = room_width;
 } else if(sprite_index == Player_L) {
-    start_x = x - LaserBeam.sprite_width-2;
+    start_x = x - laser_width-2;
     dest_x = 0;
 }
 start_y = y;

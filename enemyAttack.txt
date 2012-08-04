@@ -21,6 +21,6 @@ with (Player)
 	if (dx < other.attack_dist && abs(other.attack_cy - cy) < global.attack_maxYdiff)
 	{
 		other.attack_cooldown = other.attack_cooldown_max;
-		execute_file("player_hit", other.attack_damage); //Other refers to this Enemy
+		execute_file("hit_player.txt", other.attack_damage); //Other refers to this Enemy
 	}
 }

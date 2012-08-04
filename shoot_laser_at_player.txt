@@ -1,8 +1,10 @@
+laser_width = sprite_get_width(Laser_s);
+
 if(Player.x >= x) {
     start_x = x + sprite_width + 2;
     dest_x = room_width;
 } else {
-    start_x = x - LaserBeam.sprite_width-2;
+    start_x = x - laser_width-2;
     dest_x = 0;
 }
 start_y = y;

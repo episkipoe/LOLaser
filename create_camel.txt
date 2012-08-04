@@ -1,3 +1,4 @@
+event_inherited();
 left_sprite=Camel_L;
 right_sprite=Camel_R;
 points=1;
