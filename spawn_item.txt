@@ -1,10 +1,14 @@
+if(instance_number(ImmediateActivate) >= 5) { exit; }
+
 x = irandom(room_width);
 y = irandom_range(global.min_y, global.max_y); 
 
-itm = random(60);
+itm = random(200);
 
-if(itm > 40) {
+if(itm > 180) {
 	instance_create(x, y, NyanCatenator);
-} else {
-
+} else if(itm > 150) {
+	instance_create(x, y, Battery);
+} else if(itm > 120) {
+	instance_create(x, y, Guts);
 }

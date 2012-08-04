@@ -1,3 +1,6 @@
+if(global.battery <= 0) { exit }
+global.battery -= 5;
+
 if(sprite_index == Player_R) {
     start_x = x + sprite_width + 2;
     dest_x = room_width;
@@ -13,6 +16,7 @@ dest_y = y;
 inst = instance_create(start_x, start_y, LaserBeam);
 inst.dest_x = dest_x;
 inst.dest_y = dest_y;
+inst.sprite_index = BlueLaser_s;
 with inst {
     move_towards_point(dest_x, dest_y, 10);
 }

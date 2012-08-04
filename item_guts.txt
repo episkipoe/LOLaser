@@ -1,0 +1,4 @@
+global.health += 20;
+if(global.health > global.maxhealth) {
+	global.health = global.maxhealth
+}
