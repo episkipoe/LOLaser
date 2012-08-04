@@ -1,0 +1,4 @@
+hit_points -= 1;
+if(hit_points <= 0) {
+	execute_file("destroy_enemy");
+}
