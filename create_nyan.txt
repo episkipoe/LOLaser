@@ -1,1 +1,6 @@
 event_inherited();
+left_sprite=Nyan_L;
+right_sprite=Nyan_R;
+points=2;
+hit_points=2;
+move_speed=6;
