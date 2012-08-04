@@ -1,14 +1,30 @@
 if(instance_number(ImmediateActivate) >= 5) { exit; }
 
-x = irandom(room_width);
-y = irandom_range(global.min_y, global.max_y); 
+// Create spawn points for both moving and non-moving items:
 
-itm = random(200);
+stationary_item_spawn_x = irandom(room_width);
+stationary_item_spawn_y = irandom_range(global.min_y, global.max_y); 
 
-if(itm > 180) {
-	instance_create(x, y, NyanCatenator);
-} else if(itm > 150) {
-	instance_create(x, y, Battery);
-} else if(itm > 120) {
-	instance_create(x, y, Guts);
+if(!irandom(1)) {
+	moving_item_spawn_x = -200;
+} else {
+	moving_item_spawn_x = room_width+200;
+}
+moving_item_spawn_y = irandom_range(global.min_y, global.max_y); 
+
+// Decide which item should be created, and create it:
+// 10% chance: Pop tart
+// 15% chance: Battery
+// 15% chance: Guts
+// 20% chance: Rabbit
+
+itm = random(100);
+if(itm > 90) {
+	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, NyanCatenator);
+} else if(itm > 75) {
+	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, Battery);
+} else if(itm > 60) {
+	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, Guts);
+} else if(itm > 40) {
+	instance_create(moving_item_spawn_x, moving_item_spawn_y, Rabbit);
 }
