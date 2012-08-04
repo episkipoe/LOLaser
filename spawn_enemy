@@ -1,7 +1,7 @@
 if(!irandom(1)) {
 	x = 0;
 } else {
-	x = room_width-10;
+	x = room_width-100;
 }
 
 y = irandom_range(global.min_y, global.max_y); 
@@ -9,14 +9,14 @@ y = irandom_range(global.min_y, global.max_y);
 
 if(global.level < 2) {
 	if(!irandom(2)) {  //one in three chance 
-		instance_create(x, y, Camel);  //slower, but more powerful?
+		instance_create(x, max(y, y - sprite_get_height(Camel_L)) , Camel);  //slower, but more powerful?
 	} else {
-		instance_create(x, y, Lion);
+		instance_create(x, max(y, y - sprite_get_height(Lion_L)), Lion);
 	}
 } else {
 	if(!irandom(2)) {
-		instance_create(x, y, Bear);  //slower, but more powerful?
+		instance_create(x, max(y, y - sprite_get_height(Bear_L)), Bear);  //slower, but more powerful?
 	} else {
-		instance_create(x, y, Lion);
+		instance_create(x, max(y, y - sprite_get_height(Lion_L)), Lion);
 	}
 }
