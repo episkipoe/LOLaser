@@ -1,5 +1,6 @@
 event_inherited();
-left_sprite = sprite_index = Lion_L;
+sprite_index = Lion_L;
+left_sprite = Lion_L;
 right_sprite=Lion_R;
 points=1;
 hit_points=1;
