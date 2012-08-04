@@ -6,7 +6,6 @@ if(!irandom(1)) {
 
 y = irandom_range(global.min_y, global.max_y); 
 
-
 if(global.level < 2) {
 	if(!irandom(2)) {  //one in three chance 
 		instance_create(x, max(y, y - sprite_get_height(Camel_L)) , Camel);  
@@ -17,12 +16,14 @@ if(global.level < 2) {
 	if(!irandom(2)) {
 		instance_create(x, max(y, y - sprite_get_height(Bear_L)), Bear); 
 	} else {
-		instance_create(x, max(y, y - sprite_get_height(Lion_L)), Lion);
+		obj = choose(Camel, Lion);
+		instance_create(x, max(y, y - sprite_get_height(Lion_L)), obj);
 	}
 } else {
 	if(!irandom(2)) {
 		instance_create(x, max(y, y - sprite_get_height(Bear_L)), Bear);  
 	} else {
-		instance_create(x, max(y, y - sprite_get_height(Lion_L)), Tiger);
+		obj = choose(Camel, Lion, Bear, Tiger);
+		instance_create(x, max(y, y - sprite_get_height(Lion_L)), obj);
 	}
 }
