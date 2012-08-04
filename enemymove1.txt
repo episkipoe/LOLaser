@@ -1,0 +1,26 @@
+buffer = 3;
+move_speed = 3;
+
+if (Player.y - self.y > buffer)
+{
+    self.y = min(global.max_y, self.y + move_speed);
+    exit;
+}
+
+if (Player.y - self.y < -buffer)
+{
+    self.y = max(global.min_y, self.y - move_speed);
+    exit;
+}
+
+if (Player.x - self.x > buffer)
+{
+    self.x = min(global.max_x, self.x + move_speed);
+    exit;
+}
+
+if (Player.x - self.x < -buffer)
+{
+    self.x = max(global.min_x, self.x - move_speed);
+    exit;
+}

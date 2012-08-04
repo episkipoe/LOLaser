@@ -1,0 +1,4 @@
+global.min_x = 0;
+global.max_x = 800;
+global.max_y = 600;
+global.min_y = 300;
