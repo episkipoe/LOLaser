@@ -1,20 +1,20 @@
-if (global.attack_cooldown > 0)
-{
+//if (global.attack_cooldown > 0)
+//{
     with (Player)
     {
-        if (sprite_index == PlayerAttack_R)
+        if (sprite_index == PlayerAttack_R || sprite_index == Player_R)
         {
-            attack_cx = (sprite_width + global.attack_distance) / 2;
+            attack_cx = x + sprite_width + global.attack_distance ;
         } else
         {
-            attack_cx = (sprite_width - global.attack_distance) / 2;
+            attack_cx = x - global.attack_distance;
         }
-        attack_cy = (sprite_height) / 2;
+        attack_cy = y + sprite_height / 2;
         
         draw_set_color(c_aqua);
-        draw_circle(attack_cx + x, attack_cy + y, global.attack_distance / 2, true);
+		draw_point(attack_cx, attack_cy);
     }
-}
+//}
 
 draw_text(view_xview[view_current] + 100, view_yview[view_current],
             string(global.attack_cooldown));
@@ -23,4 +23,7 @@ with (Enemy)
 {
     draw_text(x, y, string(hit_points));
     draw_text(x, y + 20, string(attack_cooldown));
+	if (variable_local_exists("attack_cx")){ //Lazy way to ignore being called before first step
+		draw_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy);
+	}
 }

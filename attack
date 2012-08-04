@@ -3,29 +3,28 @@ if (global.attack_cooldown > 0) {
 }
 global.attack_cooldown = global.attack_cooldown_max;
 
-if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Player_R) {
-	sprite_index = PlayerAttack_R;
-	attack_cx = x + (sprite_width + global.attack_distance) / 2;
-} else {
-	sprite_index = PlayerAttack_L;
-	attack_cx = x + (sprite_width - global.attack_distance) / 2;
-}
-
 enemy_id = collision_rectangle(x,y,x+sprite_width,y+sprite_height,Enemy,true,false);
 if(enemy_id >= 0) {
 	with enemy_id {
 		execute_file("enemyHit.txt", global.attack_damage); 
 	}
-	exit
+	exit;
+}
+
+if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Player_R) {
+	sprite_index = PlayerAttack_R;
+	attack_cx = x + sprite_width + global.attack_distance;
+} else {
+	sprite_index = PlayerAttack_L;
+	attack_cx = x - global.attack_distance;
 }
 
 attack_cy = y + sprite_height / 2;
 with Enemy {	
-	cy = y + sprite_height / 2;
-	dx = point_distance(
-		other.attack_cx, other.attack_cy,
-		x + sprite_width / 2, cy);
-	if(dx < global.attack_distance + sprite_width / 2 && abs(cy - other.attack_cy) < global.attack_maxYdiff ) {
+	right = x + sprite_width;
+	bottom = y + sprite_height;
+	if (other.attack_cx >= x && other.attack_cx < right
+		&& other.attack_cy >= y && other.attack_cy < bottom){
 		execute_file("enemyHit.txt", global.attack_damage); 
 	}
 }

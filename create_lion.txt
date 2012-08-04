@@ -5,3 +5,4 @@ right_sprite=Lion_R;
 points=1;
 hit_points=1;
 move_speed=4;
+attack_cooldown_max = 15;

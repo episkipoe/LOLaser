@@ -5,3 +5,4 @@ right_sprite=Bear_R;
 points=2;
 hit_points=3;
 move_speed=3;
+attack_damage=12;

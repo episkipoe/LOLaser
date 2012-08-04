@@ -6,21 +6,17 @@ if (attack_cooldown > 0){
 
 if (sprite_index == right_sprite)
 {
-	attack_cx = x + (attack_dist + sprite_width) / 2;
+	attack_cx = x + attack_dist + sprite_width;
 } else {
-	attack_cx = x + ( -attack_dist + sprite_width) / 2;
+	attack_cx = x - attack_dist;
 }
 attack_cy = y + sprite_height / 2;
 
-with (Player)
+//We can use a line here as there is only 1 player
+obj = collision_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy, Player, true, true)
+
+if (obj != noone || argument0)
 {
-	cy = y + sprite_height / 2;
-	dx = point_distance(
-		other.attack_cx, other.attack_cy,
-		x + sprite_width / 2, cy);
-	if (dx < other.attack_dist && abs(other.attack_cy - cy) < global.attack_maxYdiff)
-	{
-		other.attack_cooldown = other.attack_cooldown_max;
-		execute_file("hit_player.txt", other.attack_damage); //Other refers to this Enemy
-	}
+	attack_cooldown = attack_cooldown_max;
+	execute_file("hit_player.txt", attack_damage); 
 }
