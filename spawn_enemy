@@ -19,5 +19,4 @@ if(global.level < 2) {
 	} else {
 		instance_create(x, y, Lion);
 	}
-	instance_create(x, y, Enemy);
 }

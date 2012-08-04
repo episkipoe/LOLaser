@@ -1,5 +1,5 @@
 left_sprite=Lion_L;
 right_sprite=Lion_R;
 points=1;
-health=1;
+hit_points=1;
 move_speed=4;

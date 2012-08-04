@@ -12,7 +12,8 @@ with Enemy {
 		other_cy,
 		(x + sprite_width) / 2,
 		cy);
+	//show_message(string(dx) + " and " + string(abs(cy - other_cy))); 
 	if(dx < global.attack_distance && abs(cy - other_cy) < global.attack_maxYdiff ) {
-		execute_file("destroy_enemy");
+		execute_file("hit_enemy.txt");
 	}
 }

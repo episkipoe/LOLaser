@@ -10,5 +10,5 @@ global.max_x = 1600;
 global.max_y = 900;
 global.min_y = 300;
 
-global.attack_distance=60;
+global.attack_distance=Player.sprite_width;
 global.attack_maxYdiff = 5;
