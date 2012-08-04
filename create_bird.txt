@@ -1,4 +1,4 @@
-event_inherited();
+execute_file("create_enemy.txt");
 left_sprite=Bird_R;
 sprite_index=Bird_R;
 right_sprite=Bird_R;

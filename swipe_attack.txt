@@ -1,0 +1,1 @@
+// double damage if contact made
