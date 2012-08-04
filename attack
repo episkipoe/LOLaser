@@ -3,6 +3,13 @@ if (global.attack_cooldown > 0)
 	exit;
 }
 global.attack_cooldown = global.attack_cooldown_max;
+enemy_id = collision_rectangle(x,y,x+sprite_width,y+sprite_height,Enemy,true,false);
+if(enemy_id >= 0) {
+	with enemy_id {
+		execute_file("enemyHit.txt", global.attack_damage); 
+	}
+	exit
+}
 
 if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Player_R) {
 	sprite_index = PlayerAttack_R;
