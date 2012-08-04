@@ -1,0 +1,3 @@
+instance_destroy();
+global.num_kills += 1;
+global.score += 1;

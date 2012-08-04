@@ -1,5 +1,6 @@
 global.health=100;
 global.maxhealth=100;
+global.score=0;
 global.num_kills=0;
 
 global.min_x = 0;
