@@ -1,0 +1,26 @@
+//Should be called before changing the sprite
+if (attack_cooldown > 0){
+	attack_cooldown -= 1;
+	exit;
+}
+
+if (sprite_index == right_sprite)
+{
+	attack_cx = (x + attack_dist + sprite_width) / 2;
+} else {
+	attack_cx = (x - attack_dist + sprite_width) / 2;
+}
+attack_cy = (y + sprite_height) / 2;
+
+with (Player)
+{
+	cy = (y + sprite_height) / 2;
+	dx = point_distance(
+		other.attack_cx, other.attack_cy,
+		(x + sprite_width) / 2, cy);
+	if (dx < other.attack_dist && abs(other.attack_cy - cy) < global.attack_maxYdiff)
+	{
+		other.attack_cooldown = other.attack_cooldown_max;
+		execute_file("player_hit", other.attack_damage); //Other refers to this Enemy
+	}
+}

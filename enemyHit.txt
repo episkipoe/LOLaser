@@ -1,0 +1,5 @@
+health -= argument0;
+if (health <= 0)
+{
+	execute_file("destroy_enemy");
+}

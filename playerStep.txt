@@ -1,0 +1,1 @@
+global.attack_cooldown = max(0, global.attack_cooldown - 1); //Decrement attack cooldown

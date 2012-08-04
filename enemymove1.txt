@@ -1,3 +1,7 @@
+if (attack_cooldown > 0)
+{
+	exit;
+}
 buffer = 3;
 
 if (Player.y - self.y > buffer)

@@ -1,3 +1,7 @@
+if (attack_cooldown > 0)
+{
+	exit;
+}
 buffer = 3;
 dx = Player.x - self.x;
 dy = Player.y - self.y;

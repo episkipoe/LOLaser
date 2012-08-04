@@ -12,3 +12,6 @@ global.min_y = 300;
 
 global.attack_distance=60;
 global.attack_maxYdiff = 5;
+global.attack_damage = 1;
+global.attack_cooldown = 0;
+global.attack_cooldown_max = 15;

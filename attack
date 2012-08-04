@@ -1,3 +1,9 @@
+if (global.attack_cooldown > 0)
+{
+	exit;
+}
+global.attack_cooldown = global.attack_cooldown_max;
+
 if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Player_R) {
 	sprite_index = PlayerAttack_R;
 	attack_cx = (x + sprite_width + global.attack_distance) / 2;
@@ -6,13 +12,12 @@ if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Playe
 	attack_cx = (x + sprite_width - global.attack_distance) / 2;
 }
 attack_cy = (y + sprite_height) / 2;
-with Enemy {
-	
-	cy = (y + sprite_height);
+with Enemy {	
+	cy = (y + sprite_height) / 2;
 	dx = point_distance(
-		attack_cx, attack_cy,
+		other.attack_cx, other.attack_cy,
 		(x + sprite_width) / 2, cy);
-	if(dx < global.attack_distance && abs(cy - attack_cy) < global.attack_maxYdiff ) {
-		execute_file("destroy_enemy");
+	if(dx < global.attack_distance && abs(cy - other.attack_cy) < global.attack_maxYdiff ) {
+		execute_file("enemyHit.txt", global.attack_damage); 
 	}
 }

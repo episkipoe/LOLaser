@@ -1,0 +1,8 @@
+//Defaults, most of these are overriden in create_*.txt
+health = 1; 
+points = 1;
+move_speed = 1;
+attack_dist = 60;
+attack_cooldown_max = 30; //Steps between attacks
+attack_cooldown = 0;
+attack_damage = 1;
