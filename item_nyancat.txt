@@ -1,4 +1,5 @@
-with (Lion) do {
+with (Lion) {
 	instance_create(x, y, NyanCat);
 	instance_destroy();
+	sound_play(Nyan);
 }
