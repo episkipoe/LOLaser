@@ -1,0 +1,26 @@
+if (global.attack_cooldown > 0)
+{
+    with (Player)
+    {
+        if (sprite_index == PlayerAttack_R)
+        {
+            attack_cx = (sprite_width + global.attack_distance) / 2;
+        } else
+        {
+            attack_cx = (sprite_width - global.attack_distance) / 2;
+        }
+        attack_cy = (sprite_height) / 2;
+        
+        draw_set_color(c_aqua);
+        draw_circle(attack_cx + x, attack_cy + y, global.attack_distance / 2, true);
+    }
+}
+
+draw_text(view_xview[view_current] + 100, view_yview[view_current],
+            string(global.attack_cooldown));
+            
+with (Enemy)
+{
+    draw_text(x, y, string(hit_points));
+    draw_text(x, y + 20, string(attack_cooldown));
+}
