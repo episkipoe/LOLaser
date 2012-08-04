@@ -1,5 +1,5 @@
 //Defaults, most of these are overriden in create_*.txt
-health = 1; 
+hit_points = 1; 
 points = 1;
 move_speed = 1;
 attack_dist = 60;

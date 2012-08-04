@@ -1,5 +1,6 @@
-health -= argument0;
-if (health <= 0)
+//show_message("enemyHit:" + string(argument0) + " health:" + string(hit_points));
+hit_points -= argument0;
+if (hit_points <= 0)
 {
 	execute_file("destroy_enemy");
 }
