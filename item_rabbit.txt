@@ -1,0 +1,6 @@
+
+// Got rabbit!
+// Bonus: Temporary player speed increase
+
+global.player_speed_multiplier = 3.0;
+global.bonus_speed_life += 80;

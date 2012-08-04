@@ -1,1 +1,15 @@
 global.attack_cooldown = max(0, global.attack_cooldown - 1); //Decrement attack cooldown
+
+if (speed != 0) { speed = global.player_speed * global.player_speed_multiplier; }
+
+if (global.bonus_speed_life == 0) {
+	if (global.player_speed_multiplier > 1.0) {
+		global.player_speed_multiplier -= 0.02;
+		if (global.player_speed_multiplier <= 1.0) { global.player_speed_multiplier = 1.0; }
+	} else if (global.player_speed_multiplier < 1.0) {
+		global.player_speed_multiplier += 0.02;
+		if (global.player_speed_multiplier >= 1.0) { global.player_speed_multiplier = 1.0; }
+	}
+} else {
+	global.bonus_speed_life -= 1;
+}

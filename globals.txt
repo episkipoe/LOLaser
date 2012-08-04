@@ -7,6 +7,10 @@ global.num_kills = 0;
 global.level     = 1
 global.kills_to_next_level = 10;
 
+global.player_speed = 5;
+global.player_speed_multiplier = 1.0;
+global.bonus_speed_life = 0;
+
 global.min_x = 0;
 global.max_x = 1600;
 global.max_y = 900;
