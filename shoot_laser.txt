@@ -1,6 +1,14 @@
 if(global.battery <= 0) { exit }
 global.battery -= 5;
 
+if (!sound_isplaying(FiringLaser))
+{
+	if (!irandom(20))
+	{
+		sound_play(FiringLaser);
+	}
+}
+
 laser_width = sprite_get_width(Laser_s);
 
 if(sprite_index == Player_R) {
