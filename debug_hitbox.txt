@@ -34,9 +34,12 @@
 //}
 
 //draw_text(view_xview[view_current] + 100, view_yview[view_current], string(global.attack_cooldown));
+
             
 with (Enemy)
 {
+/*	
+
     draw_text(x, y, string(hit_points));
 	draw_text(x, y+20, string(x) + ", " + string (y));
 	draw_text(x, y+40, string(sprite_width) + "x" + string(sprite_height) + ", " + string(global.max_y - sprite_height));
@@ -44,7 +47,6 @@ with (Enemy)
 	if (variable_local_exists("dx")) {
 		draw_text(x, y + 60, string(dx) + ", " + string(dy));
 	}
-/*	
 	draw_text(x, y + 20, string(attack_cooldown));
 	if (variable_local_exists("attack_cx")){ //Lazy way to ignore being called before first step
 		draw_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy);
