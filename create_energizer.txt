@@ -1,0 +1,10 @@
+if (x < 0) {
+	sprite_index = Energizer_R
+	facing=1; // right
+} else {
+	sprite_index = Energizer_L
+	facing=0; // left
+}
+
+move_speed = 17;
+

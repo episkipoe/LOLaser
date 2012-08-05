@@ -1,0 +1,9 @@
+sprite_index = SmallAngel_s
+if (x < 0) {
+	facing=1; // right
+} else {
+	facing=0; // left
+}
+
+move_speed = 17;
+

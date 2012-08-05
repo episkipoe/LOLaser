@@ -1,0 +1,1 @@
+global.battery = global.maxbattery;

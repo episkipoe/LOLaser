@@ -12,13 +12,15 @@ if(!irandom(1)) {
 }
 moving_item_spawn_y = irandom_range(global.min_y, global.max_y); 
 
+if(!irandom(20)) { exit }
+
 // Decide which item should be created, and create it:
 // 10% chance: Pop tart
 // 15% chance: Battery
 // 15% chance: Guts
 // 20% chance: Rabbit
-
-itm = random(100);
+//  5% chance: Angel (full health) or Energizer (full battery)
+itm = irandom(100);
 if(itm > 90) {
 	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Poptart_s), global.max_y), NyanCatenator);
 } else if(itm > 75) {
@@ -27,4 +29,12 @@ if(itm > 90) {
 	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Guts_s), global.max_y), Guts);
 } else if(itm > 40) {
 	instance_create(moving_item_spawn_x, min(moving_item_spawn_y - sprite_get_height(Rabbit_L), global.max_y), Rabbit);
+} else if(itm > 30) {
+	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Coin_s), global.max_y), Coin);
+} else if(itm > 20) {
+} else if(itm > 10) {
+} else if(itm > 5) {
+	instance_create(moving_item_spawn_x, min(moving_item_spawn_y - sprite_get_height(SmallAngel_s), global.max_y), HealthAngel);
+} else if(itm > 0) {
+	instance_create(moving_item_spawn_x, min(moving_item_spawn_y - sprite_get_height(Energizer_L), global.max_y), Energizer);
 }

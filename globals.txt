@@ -5,7 +5,7 @@ global.maxbattery = 100;
 global.score     = 0;
 global.num_kills = 0;
 global.level     = 1
-global.kills_to_next_level = 5;
+global.kills_to_next_level = 10;
 
 global.player_speed = 5;
 global.player_speed_multiplier = 1.0;
@@ -15,7 +15,7 @@ global.player_animation_speed=0.3;
 global.min_x = 0;
 global.max_x = 1600;
 global.max_y = 900;
-global.min_y = 470;
+global.min_y = 360;
 
 global.attack_damage = 2;
 global.attack_cooldown = 0;

@@ -15,7 +15,7 @@ if(global.level < 2) {
 } else if(global.level < 4) {
 	if(!irandom(20)) {
 		instance_create(x, max(y, y - sprite_get_height(Tiger_L)), Tiger);  
-	} else if(!irandom(2)) {
+	} else if(!irandom(3)) {
 		instance_create(x, max(y, y - sprite_get_height(Bear_L)), Bear); 
 	} else {
 		obj = choose(Camel, Lion);
