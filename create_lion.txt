@@ -1,7 +1,9 @@
 event_inherited();
 sprite_index = Lion_L;
 left_sprite = Lion_L;
-right_sprite=Lion_R;
+left_attack = Lion_L;
+right_sprite = Lion_R;
+right_attack = Lion_R;
 points=1;
 hit_points=1;
 move_speed=4;

@@ -1,7 +1,9 @@
 execute_file("create_enemy.txt");
-left_sprite=Bird_R;
 sprite_index=Bird_R;
+left_sprite=Bird_R;
+left_attack=Bird_R;
 right_sprite=Bird_R;
+right_attack=Bird_R;
 points=100;
 hit_points=4000;
 move_speed=6;

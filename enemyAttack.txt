@@ -4,8 +4,7 @@ if (attack_cooldown > 0){
 	exit;
 }
 
-if (sprite_index == right_sprite)
-{
+if (sprite_index == right_sprite) {
 	attack_cx = x + attack_dist + sprite_width;
 } else {
 	attack_cx = x - attack_dist;
@@ -15,8 +14,12 @@ attack_cy = y + sprite_height / 2;
 //We can use a line here as there is only 1 player
 obj = collision_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy, Player, true, true)
 
-if (obj != noone || argument0)
-{
+if (obj != noone || argument0) {
+	if (sprite_index == right_sprite) {
+		sprite_index = right_attack;
+	} else {
+		sprite_index = left_attack;
+	}
 	attack_cooldown = attack_cooldown_max;
 	execute_file("hit_player.txt", attack_damage); 
 }

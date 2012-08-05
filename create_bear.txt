@@ -1,7 +1,9 @@
 event_inherited();
-left_sprite=Bear_L;
 sprite_index=Bear_L;
+left_sprite=Bear_L;
+left_attack=BearAttack_L;
 right_sprite=Bear_R;
+right_attack=BearAttack_R;
 points=2;
 hit_points=3;
 move_speed=3;
