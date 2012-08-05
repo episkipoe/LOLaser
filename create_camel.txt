@@ -5,6 +5,6 @@ left_attack = CamelAttack_L;
 right_sprite = Camel_R;
 right_attack = CamelAttack_R;
 points=1+floor(global.level*0.5);
-hit_points=4+global.level;
+max_hit_points =hit_points=4+global.level;
 move_speed=1;
 attack_damage = 5;

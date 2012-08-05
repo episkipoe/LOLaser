@@ -5,7 +5,7 @@ left_attack=BearAttack_L;
 right_sprite=Bear_R;
 right_attack=BearAttack_R;
 points=2+floor(global.level * 0.5);
-hit_points=3+global.level;
+max_hit_points =hit_points=3+global.level;
 move_speed=3;
 attack_damage=12;
 attack_cooldown_max = 45;

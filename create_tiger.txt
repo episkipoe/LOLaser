@@ -7,6 +7,6 @@ left_attack = Tiger_L;
 left_laser = Tiger_L;
 right_laser = Tiger_R;
 points=2;
-hit_points=2+floor(global.level*0.5);
+max_hit_points = hit_points=2+floor(global.level*0.5);
 move_speed=4+floor(global.level*0.5);
 laser_y_offset=10;

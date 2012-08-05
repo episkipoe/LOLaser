@@ -5,6 +5,6 @@ right_sprite=Bird_R;
 left_attack=BirdAttack_L;
 right_attack=BirdAttack_R;
 points=10;
-hit_points=10+global.level*2;
+max_hit_points =hit_points=10+global.level*2;
 move_speed=6;
 attack_damage=global.level;
