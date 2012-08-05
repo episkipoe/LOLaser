@@ -6,3 +6,6 @@ if(global.kills_to_next_level == 0) {
 	execute_file("next_level.txt");
 }
 
+execute_file("random_gut_spawn.txt");
+
+
