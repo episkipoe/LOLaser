@@ -1,0 +1,3 @@
+if (!sound_isplaying(Bird1) && !sound_isplaying(Bird2)) {
+	sound_play(choose(Bird1, Bird2));
+}

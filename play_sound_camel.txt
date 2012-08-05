@@ -1,0 +1,3 @@
+if (!sound_isplaying(Camel1) && !sound_isplaying(Camel2) && !sound_isplaying(Camel3) && !sound_isplaying(Camel4)) {
+	sound_play(choose(Camel1, Camel2, Camel3, Camel4));
+}

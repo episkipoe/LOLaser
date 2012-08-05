@@ -3,7 +3,7 @@ global.battery -= 5;
 
 if (!sound_isplaying(FiringLaser))
 {
-	if (!irandom(20))
+	if (!irandom(30))
 	{
 		sound_play(FiringLaser);
 	}

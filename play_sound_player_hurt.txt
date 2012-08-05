@@ -1,3 +1,3 @@
-if (!sound_isplaying(PlayerHurt1) && !sound_isplaying(PlayerHurt2) && !sound_isplaying(PlayerHurt3)) {
-	sound_play(choose(PlayerHurt1, PlayerHurt2, PlayerHurt3));
+if (!sound_isplaying(PlayerHurt1) && !sound_isplaying(PlayerHurt2) && !sound_isplaying(PlayerHurt3) && !sound_isplaying(PlayerHurt4) && !sound_isplaying(PlayerHurt5) && !sound_isplaying(PlayerHurt6) && !sound_isplaying(PlayerHurt7)) {
+	sound_play(choose(PlayerHurt1, PlayerHurt2, PlayerHurt3, PlayerHurt4, PlayerHurt5, PlayerHurt6, PlayerHurt7));
 }
