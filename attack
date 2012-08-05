@@ -19,7 +19,7 @@ if(enemy_id >= 0) {
 	exit;
 }
 
-attack_cy = y + sprite_height / 2;
+attack_cy = y + global.attack_y_offset;
 with Enemy {	
 	if (collision_ellipse(
 		Player.attack_cx, Player.attack_cy, 

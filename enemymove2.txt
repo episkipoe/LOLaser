@@ -14,7 +14,7 @@ if (abs(dy) > abs(dx))
 {
 	if (dy > buffer)
 	{
-		self.y = min(global.max_y, self.y + move_speed);
+		self.y = min(global.max_y - sprite_height, self.y + move_speed);
 		exit;
 	}
 
@@ -27,14 +27,14 @@ if (abs(dy) > abs(dx))
 {
 	if (dx > buffer)
 	{
-		self.x = min(global.max_x, self.x + move_speed);
+		self.x = min(global.max_x + sprite_width, self.x + move_speed);
 		sprite_index = right_sprite;
 		exit;
 	}
 
 	if (dx < -buffer)
 	{
-		self.x = max(global.min_x, self.x - move_speed);
+		self.x = max(global.min_x - sprite_width, self.x - move_speed);
 		sprite_index = left_sprite;
 		exit;
 	}
