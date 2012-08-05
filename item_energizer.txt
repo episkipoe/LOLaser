@@ -1,1 +1,4 @@
+if(global.battery == global.maxbattery) {
+	global.maxbattery += 5;
+}
 global.battery = global.maxbattery;

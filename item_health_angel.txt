@@ -1,1 +1,4 @@
+if(global.health == global.maxhealth) {
+	global.maxhealth += 5;
+}
 global.health = global.maxhealth;

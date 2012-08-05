@@ -11,7 +11,6 @@ if(!irandom(1)) {
 	moving_item_spawn_x = room_width+200;
 }
 moving_item_spawn_y = irandom_range(global.min_y, global.max_y); 
-
 if(!irandom(20)) { exit }
 
 // Decide which item should be created, and create it:
