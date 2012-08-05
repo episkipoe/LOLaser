@@ -11,6 +11,7 @@ with (Player) {
 }
 if(global.health <= 0) {
 	sound_stop(Nyan);
+	sound_play(Death);
 	room_goto(DeathRoom);
 }
 

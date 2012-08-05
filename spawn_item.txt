@@ -2,7 +2,7 @@ if(instance_number(ImmediateActivate) >= 5) { exit; }
 
 // Create spawn points for both moving and non-moving items:
 
-stationary_item_spawn_x = irandom(room_width);
+stationary_item_spawn_x = irandom_range(20, room_width-sprite_get_width(Poptart_s)-20);
 stationary_item_spawn_y = irandom_range(global.min_y, global.max_y); 
 
 if(!irandom(1)) {
