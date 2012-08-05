@@ -28,5 +28,5 @@ inst.dest_x = dest_x;
 inst.dest_y = dest_y;
 inst.sprite_index = BlueLaser_s;
 with inst {
-    move_towards_point(dest_x, dest_y, 10);
+    move_towards_point(dest_x, dest_y, 15);
 }

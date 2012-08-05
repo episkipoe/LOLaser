@@ -1,5 +1,7 @@
 with (Lion) {
 	instance_create(x, y, NyanCat);
 	instance_destroy();
-	sound_play(Nyan);
 }
+sound_play(Nyan);
+instance_create(-sprite_get_width(Nyan_R), global.min_y, NyanCat);
+instance_create(global.max_x, global.min_y, NyanCat);

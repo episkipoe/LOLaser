@@ -20,11 +20,11 @@ moving_item_spawn_y = irandom_range(global.min_y, global.max_y);
 
 itm = random(100);
 if(itm > 90) {
-	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, NyanCatenator);
+	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Poptart_s), global.max_y), NyanCatenator);
 } else if(itm > 75) {
-	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, Battery);
+	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Battery_s), global.max_y), Battery);
 } else if(itm > 60) {
-	instance_create(stationary_item_spawn_x, stationary_item_spawn_y, Guts);
+	instance_create(stationary_item_spawn_x, min(stationary_item_spawn_y - sprite_get_height(Guts_s), global.max_y), Guts);
 } else if(itm > 40) {
-	instance_create(moving_item_spawn_x, moving_item_spawn_y, Rabbit);
+	instance_create(moving_item_spawn_x, min(moving_item_spawn_y - sprite_get_height(Rabbit_L), global.max_y), Rabbit);
 }
