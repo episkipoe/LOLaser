@@ -13,3 +13,11 @@ if (global.bonus_speed_life == 0) {
 } else {
 	global.bonus_speed_life -= 1;
 }
+
+//NyanCat
+if (sound_isplaying(Nyan)) {
+	if (instance_number(NyanCat) <= 0)
+	{
+		sound_stop(Nyan);
+	}
+}

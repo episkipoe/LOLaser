@@ -6,6 +6,7 @@ global.health += 5;
 if(global.health > global.maxhealth) {
 	global.health = global.maxhealth
 }
-sound_play(Nyan);
+
+sound_loop(Nyan);
 instance_create(-sprite_get_width(Nyan_R), global.min_y, NyanCat);
 instance_create(global.max_x, global.min_y, NyanCat);

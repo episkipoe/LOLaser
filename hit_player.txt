@@ -1,4 +1,5 @@
 global.health -= argument0;
 if(global.health <= 0) {
+	sound_stop(Nyan);
 	room_goto(DeathRoom);
 }

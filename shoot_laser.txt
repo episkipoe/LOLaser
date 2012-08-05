@@ -6,17 +6,21 @@ if(global.battery <= 0) {
 }
 global.battery -= 5;
 
+laser_sprite = BlueLaser_s;
+laser_obj = LaserBeam;
 if (!sound_isplaying(FiringLaser))
 {
-	if (!irandom(40))
+	if (!irandom(3))
 	{
 		sound_play(FiringLaser);
+		laser_sprite = SuperLaser_s;
+		laser_obj = SuperLaserBeam;
 	} else {
 		execute_file("play_sound_laser_attack.txt");
 	}
 }
+laser_width = sprite_get_width(laser_sprite);
 
-laser_width = sprite_get_width(Laser_s);
 
 if(sprite_index == Player_R) {
     start_x = x + sprite_width + 2;
@@ -32,11 +36,10 @@ dest_y = start_y;
 
 //show_message(string(start_x) + ", " + string(start_y) + " => " + string(dest_x) + ", " + string(dest_y));
 
-inst = instance_create(start_x, start_y, LaserBeam);
+inst = instance_create(start_x, start_y, laser_obj);
 inst.dest_x = dest_x;
 inst.dest_y = dest_y;
-inst.sprite_index = BlueLaser_s;
+inst.sprite_index = laser_sprite;
 with inst {
     move_towards_point(dest_x, dest_y, 15);
 }
-
