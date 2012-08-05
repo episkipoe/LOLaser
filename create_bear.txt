@@ -5,6 +5,6 @@ left_attack=BearAttack_L;
 right_sprite=Bear_R;
 right_attack=BearAttack_R;
 points=2;
-hit_points=3;
+hit_points=3+global.level;
 move_speed=3;
 attack_damage=12;

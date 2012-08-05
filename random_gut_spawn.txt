@@ -1,0 +1,9 @@
+if(irandom(10)) {
+	exit;
+}
+
+guts=instance_create(x,y,Guts);
+with guts {
+	sprite_index = choose(Guts_s, Guts1_s, Guts2_s);
+}
+

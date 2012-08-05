@@ -2,7 +2,7 @@ with (Lion) {
 	instance_create(x, y, NyanCat);
 	instance_destroy();
 }
-global.health += 5;
+global.health += 10;
 if(global.health > global.maxhealth) {
 	global.health = global.maxhealth
 }

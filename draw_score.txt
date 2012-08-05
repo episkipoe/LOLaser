@@ -1,0 +1,6 @@
+x=view_xview[0]+10;
+y=view_yview[0]+60;
+draw_set_color(c_white);
+draw_text(x,y,"Level: " + string(global.level) + "  Score: " + string(global.score));
+y=view_yview[0]+80;
+draw_text(x,y,"Kills to next level: " + string(global.kills_to_next_level));

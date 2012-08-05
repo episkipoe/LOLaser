@@ -1,0 +1,14 @@
+move_direction=argument0;
+
+speed = global.player_speed * global.player_speed_multiplier;
+image_speed=global.player_animation_speed;
+
+if(move_direction=="down") {
+	if(y+sprite_height > room_height) speed = 0;
+} else if(move_direction=="up") {
+	if(y<10) speed = 0;
+} else if(move_direction=="left") {
+	if(x<0) speed=0;
+} else if(move_direction=="right") {
+	if(x+sprite_width>room_width) speed = 0;
+}

@@ -26,11 +26,11 @@
 with (Enemy)
 {
     draw_text(x, y, string(hit_points));
+/*
 	if (variable_local_exists("dx")) {
 		draw_text(x, y + 20, string(dx) + ", " + string(dy));
 	}
-/*
-    draw_text(x, y + 20, string(attack_cooldown));
+	draw_text(x, y + 20, string(attack_cooldown));
 	if (variable_local_exists("attack_cx")){ //Lazy way to ignore being called before first step
 		draw_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy);
 	}
