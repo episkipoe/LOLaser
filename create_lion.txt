@@ -4,6 +4,7 @@ left_sprite = Lion_L;
 left_attack = LionAttack_L;
 right_sprite = Lion_R;
 right_attack = LionAttack_R;
+laser_y_offset = 55;
 points=1;
 hit_points=1;
 move_speed=4;
