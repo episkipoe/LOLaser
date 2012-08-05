@@ -12,6 +12,7 @@
         attack_cy = y + sprite_height / 2;
         
         draw_set_color(c_aqua);
+/*		
 		draw_ellipse(
 			attack_cx, attack_cy,
 			x+sprite_width / 2, y, true);
@@ -24,11 +25,10 @@
 			}
 		}
 		
-/*		
 		if (variable_local_exists("bx")) {
 			draw_text(x, y, string(bx) + ", " + string(by));
 		}
-		*/
+ */
 	//draw_point(attack_cx, attack_cy);
     }
 //}
@@ -43,9 +43,9 @@ with (Enemy)
 	if (variable_local_exists("dx")) {
 		draw_text(x, y + 20, string(dx) + ", " + string(dy));
 	}
-	draw_text(x, y + 20, string(attack_cooldown));*/
+	draw_text(x, y + 20, string(attack_cooldown));
 	if (variable_local_exists("attack_cx")){ //Lazy way to ignore being called before first step
 		draw_line(x + sprite_width / 2, y + sprite_height / 2, attack_cx, attack_cy);
 	}
-
+*/
 }
