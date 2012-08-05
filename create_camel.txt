@@ -1,9 +1,9 @@
 event_inherited();
 sprite_index = Camel_L;
 left_sprite = Camel_L;
-left_attack = Camel_L;
+left_attack = CamelAttack_L;
 right_sprite = Camel_R;
-right_attack = Camel_R;
+right_attack = CamelAttack_R;
 points=1;
 hit_points=5;
 move_speed=1;
