@@ -10,7 +10,7 @@ laser_sprite = BlueLaser_s;
 laser_obj = LaserBeam;
 if (!sound_isplaying(FiringLaser))
 {
-	if (!irandom(3))
+	if (!irandom(10))
 	{
 		sound_play(FiringLaser);
 		laser_sprite = SuperLaser_s;
