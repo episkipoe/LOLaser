@@ -14,9 +14,11 @@ laser_width = sprite_get_width(Laser_s);
 if(sprite_index == Player_R) {
     start_x = x + sprite_width + 2;
     dest_x = room_width;
+    sprite_index = PlayerAttack_R;
 } else if(sprite_index == Player_L) {
     start_x = x - laser_width-2;
     dest_x = 0;
+    sprite_index = PlayerAttack_L;
 }
 start_y = y;
 dest_y = y;
@@ -30,3 +32,4 @@ inst.sprite_index = BlueLaser_s;
 with inst {
     move_towards_point(dest_x, dest_y, 15);
 }
+
