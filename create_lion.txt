@@ -1,9 +1,11 @@
 event_inherited();
 sprite_index = Lion_L;
 left_sprite = Lion_L;
-left_attack = LionAttack_L;
 right_sprite = Lion_R;
+left_attack = LionAttack_L;
 right_attack = LionAttack_R;
+left_laser = LionLaser_L;
+right_laser = LionLaser_R;
 laser_y_offset = 55;
 points=1;
 hit_points=1;

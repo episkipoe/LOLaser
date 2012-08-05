@@ -1,9 +1,11 @@
 event_inherited();
 sprite_index = Tiger_L;
 left_sprite = Tiger_L;
-left_attack = Tiger_L;
 right_sprite = Tiger_R;
 right_attack = Tiger_R;
+left_attack = Tiger_L;
+left_laser = Tiger_L;
+right_laser = Tiger_R;
 points=1;
 hit_points=2;
 move_speed=4;
