@@ -8,10 +8,8 @@ global.battery -= 5;
 
 laser_sprite = BlueLaser_s;
 laser_obj = LaserBeam;
-if (!sound_isplaying(FiringLaser))
-{
-	if (!irandom(30))
-	{
+if (!sound_isplaying(FiringLaser)) {
+	if (!irandom(30)) {
 		sound_play(FiringLaser);
 		laser_sprite = SuperLaser_s;
 		laser_obj = SuperLaserBeam;
