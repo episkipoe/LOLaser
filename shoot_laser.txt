@@ -1,11 +1,18 @@
-if(global.battery <= 0) { exit }
+if(global.battery <= 0) { 
+	if (!sound_isplaying(LaserEmpty)) {
+		sound_play(LaserEmpty);
+	}
+	exit ;
+}
 global.battery -= 5;
 
 if (!sound_isplaying(FiringLaser))
 {
-	if (!irandom(30))
+	if (!irandom(40))
 	{
 		sound_play(FiringLaser);
+	} else {
+		execute_file("play_sound_laser_attack.txt");
 	}
 }
 
