@@ -12,6 +12,11 @@
         attack_cy = y + sprite_height / 2;
         
         draw_set_color(c_aqua);
+/*		
+		if (variable_local_exists("bx")) {
+			draw_text(x, y, string(bx) + ", " + string(by));
+		}
+		*/
 	//draw_point(attack_cx, attack_cy);
     }
 //}
@@ -21,6 +26,9 @@
 with (Enemy)
 {
     draw_text(x, y, string(hit_points));
+	if (variable_local_exists("dx")) {
+		draw_text(x, y + 20, string(dx) + ", " + string(dy));
+	}
 /*
     draw_text(x, y + 20, string(attack_cooldown));
 	if (variable_local_exists("attack_cx")){ //Lazy way to ignore being called before first step

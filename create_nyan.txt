@@ -1,9 +1,9 @@
 event_inherited();
 sprite_index = Nyan_L;
 left_sprite = Nyan_L;
-left_attack = Nyan_L;
+left_attack = NyanAttack_L;
 right_sprite = Nyan_R;
-right_attack = Nyan_R;
+right_attack = NyanAttack_R;
 points=2;
 hit_points=2;
 move_speed=7;

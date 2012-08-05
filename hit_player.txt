@@ -1,5 +1,16 @@
 global.health -= argument0;
+global.player_fade_dur = 15;
+with (Player) {
+	image_alpha = 0.7;
+	if (!irandom(3))
+	{
+		bx = 0;
+		by = irandom(sprite_height-73);
+		instance_create(x + bx, y + by, BloodSplatter);
+	}
+}
 if(global.health <= 0) {
 	sound_stop(Nyan);
 	room_goto(DeathRoom);
 }
+

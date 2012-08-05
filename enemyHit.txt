@@ -1,5 +1,12 @@
 //show_message("enemyHit:" + string(argument0) + " health:" + string(hit_points));
 hit_points -= argument0;
+
+if (!irandom(5))
+{
+	bx = irandom(sprite_width-50);
+	by = irandom(sprite_height-73);
+	instance_create(x + bx, y + by, BloodSplatter);
+}
 if (hit_points <= 0)
 {
 	execute_file("destroy_enemy");

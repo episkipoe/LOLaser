@@ -15,7 +15,7 @@ global.player_animation_speed=0.3;
 global.min_x = 0;
 global.max_x = 1600;
 global.max_y = 900;
-global.min_y = 360;
+global.min_y = 470;
 
 global.attack_damage = 2;
 global.attack_cooldown = 0;
@@ -25,3 +25,5 @@ global.attack_maxYdiff = 10;
 
 //Based PlayerAttack sprite
 global.player_laser_yOffset = 66;
+
+global.player_fade_dur = 0;

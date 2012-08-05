@@ -21,3 +21,13 @@ if (sound_isplaying(Nyan)) {
 		sound_stop(Nyan);
 	}
 }
+
+//Player fading timer
+if (global.player_fade_dur > 0)
+{
+	global.player_fade_dur -= 1;
+	if (global.player_fade_dur == 0)
+	{
+		image_alpha = 1;
+	}
+}

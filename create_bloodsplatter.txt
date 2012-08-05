@@ -1,0 +1,5 @@
+sprite_index = choose(BloodA_s, BloodB_s, BloodC_s, BloodD_s);
+image_speed = 0.5;
+scale = random_range(0.25, 1);
+image_xscale = scale;
+image_yscale = scale;
