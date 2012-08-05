@@ -9,5 +9,5 @@ right_laser = LionLaser_R;
 laser_y_offset = 55;
 points=1;
 hit_points=1;
-move_speed=4;
+move_speed=4+floor(global.level*0.5);
 attack_cooldown_max = 15;

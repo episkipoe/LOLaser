@@ -7,4 +7,4 @@ right_attack = CamelAttack_R;
 points=1;
 hit_points=4+global.level;
 move_speed=1;
-attack_damage = 10;
+attack_damage = 5;
