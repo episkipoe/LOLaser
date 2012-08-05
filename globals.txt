@@ -21,3 +21,6 @@ global.attack_cooldown = 0;
 global.attack_cooldown_max = 10;
 global.attack_distance=30;
 global.attack_maxYdiff = 10;
+
+//Based PlayerAttack sprite
+global.player_laser_yOffset = 66;

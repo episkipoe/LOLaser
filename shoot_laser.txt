@@ -20,8 +20,8 @@ if(sprite_index == Player_R) {
     dest_x = 0;
     sprite_index = PlayerAttack_L;
 }
-start_y = y;
-dest_y = y;
+start_y = y + global.player_laser_yOffset;
+dest_y = start_y;
 
 //show_message(string(start_x) + ", " + string(start_y) + " => " + string(dest_x) + ", " + string(dest_y));
 
