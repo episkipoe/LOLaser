@@ -10,6 +10,8 @@ player_cy = Player.y + Player.sprite_height / 2;
 dx = player_cx - cx;
 dy = player_cy - cy;
 
+self.y = max(global.min_y, min(global.max_y - sprite_height, y))
+
 if (abs(dy) > abs(dx))
 {
 	if (dy > buffer)
