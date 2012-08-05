@@ -11,7 +11,7 @@ if(keyboard_check(vk_right) || keyboard_check(ord('d')) || sprite_index == Playe
 	attack_cx = x - global.attack_distance;
 }
 
-enemy_id = collision_rectangle(x,y,x+sprite_width,y+sprite_height,Enemy,true,false);
+enemy_id = instance_place(x, y, Enemy); //collision_rectangle(x,y,x+sprite_width,y+sprite_height,Enemy,true,false);
 if(enemy_id >= 0) {
 	with enemy_id {
 		execute_file("enemyHit.txt", global.attack_damage); 
@@ -21,10 +21,11 @@ if(enemy_id >= 0) {
 
 attack_cy = y + sprite_height / 2;
 with Enemy {	
-	right = x + sprite_width;
-	bottom = y + sprite_height;
-	if (other.attack_cx >= x && other.attack_cx < right
-		&& other.attack_cy >= y && other.attack_cy < bottom){
-		execute_file("enemyHit.txt", global.attack_damage); 
+	if (collision_ellipse(
+		Player.attack_cx, Player.attack_cy, 
+		Player.x + Player.sprite_width / 2, Player.y,
+		self.id, true, false) > 0) //Object, precise, not me
+	{
+		execute_file("enemyHit.txt", global.attack_damage);
 	}
 }
